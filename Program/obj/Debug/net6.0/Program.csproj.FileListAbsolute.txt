@@ -12,3 +12,4 @@ C:\Users\Administrator\Desktop\Algorithm\Program\obj\Debug\net6.0\refint\Program
 C:\Users\Administrator\Desktop\Algorithm\Program\obj\Debug\net6.0\Program.pdb
 C:\Users\Administrator\Desktop\Algorithm\Program\obj\Debug\net6.0\Program.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\Algorithm\Program\obj\Debug\net6.0\ref\Program.dll
+C:\Users\Administrator\Desktop\Algorithm\Program\obj\Debug\net6.0\Program.sourcelink.json
