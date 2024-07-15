@@ -6,36 +6,22 @@
       
         static void Main(string[] args)
         {
-            #region 선택 정렬
-            // 주어진 리스트 중에 최소값을 찾아서 맨 앞에 위치한 결과를 
-            // 교체하는 방식으로 정렬하는 알고리즘입니다.
-
-            int[] sel = { 9, 6, 7, 3, 5 };
-            int size= sel.Length;
-            for(int i=0;i<size-1; i++)
+            #region 계수 정렬
+            // 데이터의 값을 직접 비교하지 않고, 단순하게
+            // 각 숫자가 몇 개 있는 지 개수를 세어 저장한 다음
+            // 정렬하는 알고리즘입니다.
+            int[] number = new int[] { 1, 6, 6,6, 5, 1, 2, 3, 1, 2, 3, 6, 5, 4 };
+            int[] count = new int[6];
+            for(int i=0;i<number.Length; i++)
             {
-                int min= sel[i];
-                int position = i;
-                for(int j = i; j < size; j++)
-                {
-                    if (sel[j] < min)
-                    {
-                        min = sel[j];
-                        position = j;
-                    }
-                }
-
-                int temp = sel[i];
-                sel[i] = sel[position];
-                sel[position] = temp;
-
-                Console.Write(i + 1 + "회전 => ");
-                for (int s = 0; s < sel.Length; s++)
-                {
-                    Console.Write(sel[s] + " ");
-                }
-                Console.WriteLine();
+                count[number[i]-1]++;
             }
+
+            for(int i = 0; i < count.Length; i++)
+            {
+                Console.WriteLine(count[i]);
+            }
+
             #endregion
         }
     }
