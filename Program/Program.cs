@@ -4,23 +4,78 @@
     internal class Program
     {
       
-        static void Main(string[] args)
+        static int BinarySearch(int target, int left,int right, int[] arr)
         {
-            #region 계수 정렬
-            // 데이터의 값을 직접 비교하지 않고, 단순하게
-            // 각 숫자가 몇 개 있는 지 개수를 세어 저장한 다음
-            // 정렬하는 알고리즘입니다.
-            int[] number = new int[] { 1, 6, 6,6, 5, 1, 2, 3, 1, 2, 3, 6, 5, 4 };
-            int[] count = new int[6];
-            for(int i=0;i<number.Length; i++)
+            int pivot = (left + right) / 2;
+            if (pivot == left)
             {
-                count[number[i]-1]++;
+                if (arr[pivot] != target)
+                {
+                    return -1;
+                }
             }
 
-            for(int i = 0; i < count.Length; i++)
+            if (target < arr[pivot])
             {
-                Console.WriteLine(count[i]);
+                right = pivot;
+                return BinarySearch(target, left, right , arr);
             }
+
+            else if (target > arr[pivot])
+            {
+                left = pivot;
+                return BinarySearch(target, left, right, arr);
+            }
+
+            else
+            {
+                return pivot;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            #region 이진 탐색
+            // 탐색 범위를 반으로 나누어 찾는 값을 포함하는 범위를
+            // 좁혀가는 방식으로 동작하는 탐색 알고리즘입니다.
+
+            int[] arr = new int[] { 5, 6, 8, 11, 22, 33, 44, 50, 51, 79 };
+            int pivot=0, left=0, right=arr.Length-1;
+
+            int target = 44;
+
+            while (left < right)
+            {
+                pivot = (left + right) / 2;
+                if (pivot == left)
+                {
+                    if (arr[pivot] != target)
+                    {
+                        Console.WriteLine("해당하는 값이 존재하지 않습니다.");
+                        break;
+                    }
+                }
+
+                if (target < arr[pivot])
+                {
+                    right = pivot-1;
+                }
+
+                else if (target > arr[pivot])
+                {
+                    left = pivot+1;
+                }
+
+                else
+                {
+                    Console.WriteLine("해당하는 값(" + target + ")은 " + pivot + "에 위치합니다.");
+                    break;
+                }
+            }
+
+            Console.WriteLine(BinarySearch(target, 0, arr.Length - 1, arr));
+
+            
 
             #endregion
         }
