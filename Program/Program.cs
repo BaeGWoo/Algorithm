@@ -15,35 +15,51 @@ namespace Program
                 MergeSort(list, (start + end) / 2 + 1, end);//오른쪽
 
                 Merge(list, start, middle,end);
+                
             }
         }   
 
         static void Merge(int[] list,int start , int middle,int end)
         {
             int left = start;
-            int right = middle + 1;
-            int[] tempArr = new int[right - left + 1];
+            int right = middle+1;
+            int[,] tempArr = new int[end - start + 1,2];
 
-            for(int i = start; i <= end; i++)
+            for(int index = 0; index <tempArr.GetLength(0); index++)
             {
-                if (list[left] > list[middle])
+                if (left > middle)
                 {
-                    int temp = list[left];
-                    list[left] = list[middle];
-                    list[middle] = temp;
-                    left++;
+                    tempArr[ index,0] = right;
+                    tempArr[ index,1] = list[right++];
                 }
-
-                else if (list[right] < list[middle])
+                   
+                else if (right > end)
                 {
-                    int temp = list[right];
-                    list[right] = list[middle];
-                    list[middle] = temp;
-                    right--;
+                    tempArr[ index,0] = left;
+                    tempArr[ index,1] = list[left++];
                 }
+                   
+                else
+                {
+                    if (list[left] < list[right])
+                    {
+                        tempArr[index,0] = left;
+                        tempArr[ index,1] = list[left++];                    }
 
-                
+                    else if (list[right] < list[left])
+                    {
+                        tempArr[index,0] = right;
+                        tempArr[ index,1] = list[right++];
+                    }
+                }
             }
+
+            for(int i = start,cur=0; i <=end; i++)
+            {
+                list[i] = tempArr[cur++,1];
+            }
+          
+
         }
 
         static void Main(string[] args)
