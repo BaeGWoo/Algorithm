@@ -6,9 +6,17 @@ namespace Program
     internal class Program
     {
 
-      static void Hanoi(int n,char from, char by, char to)//막대개수, 시작막대, 중간막대 , 도착막대
+      static void Hanoi(int n,char from, char temp, char to)//막대개수, 시작막대, 중간막대 , 도착막대
         {
+            if (n == 1)
+            {
+                Console.WriteLine(from + "->" + to);
+                return;
+            }
 
+            Hanoi(n - 1, from, to, temp);
+            Console.WriteLine(from + "->" + to);
+            Hanoi(n - 1, temp,from,to);
         }
 
         static void Main(string[] args)
@@ -31,7 +39,7 @@ namespace Program
             // 2. 맨 위에 있는 원판만 이동합니다.
             // 3. 크기가 작은 원판 위에 큰 원판을 쌓을 수 없습니다.
 
-
+            Hanoi(3, 'A', 'B', 'C');
 
             #endregion
 
