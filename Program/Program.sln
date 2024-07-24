@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class10th (Divide & Conquer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class11th (Quick Sort)", "..\Class11th (Quick Sort)\Class11th (Quick Sort).csproj", "{85DE44F5-971A-4B22-9704-EA9425FDFC76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class12th (Merge Sort)", "..\Class12th (Merge Sort)\Class12th (Merge Sort).csproj", "{718361B3-23FF-4654-BC51-BA64BFA5BC32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class12th (Merge Sort)", "..\Class12th (Merge Sort)\Class12th (Merge Sort).csproj", "{718361B3-23FF-4654-BC51-BA64BFA5BC32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class13th (Dynamic Programming)", "..\Class13th (Dynamic Programming)\Class13th (Dynamic Programming).csproj", "{48D44663-7589-45A8-8A2D-76E0F63E882B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class13th (Dynamic Programming)", "..\Class13th (Dynamic Programming)\Class13th (Dynamic Programming).csproj", "{48D44663-7589-45A8-8A2D-76E0F63E882B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class 16th (Euclidean Algorithm)", "..\Class 16th (Euclidean Algorithm)\Class 16th (Euclidean Algorithm).csproj", "{33EB9B5B-AA15-4AF4-90C2-4E0D3FAC5476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{48D44663-7589-45A8-8A2D-76E0F63E882B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48D44663-7589-45A8-8A2D-76E0F63E882B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48D44663-7589-45A8-8A2D-76E0F63E882B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EB9B5B-AA15-4AF4-90C2-4E0D3FAC5476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EB9B5B-AA15-4AF4-90C2-4E0D3FAC5476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EB9B5B-AA15-4AF4-90C2-4E0D3FAC5476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EB9B5B-AA15-4AF4-90C2-4E0D3FAC5476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
