@@ -2,7 +2,7 @@
 
 namespace Program
 {
-
+    
     
     internal class Program
     {
@@ -12,6 +12,7 @@ namespace Program
         {
 
           
+
         }
     }
 }
